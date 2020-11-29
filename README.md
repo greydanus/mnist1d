@@ -50,6 +50,28 @@ The original MNIST dataset is supposed to be the [Drosophilia of machine learnin
 * **Still has some real-world relevance.** Though it's low-dimensional and synthetic, this task is arguably more interesting than [Sklearn's datasets](https://scikit-learn.org/stable/modules/classes.html#module-sklearn.datasets) such as two_moons, two_circles, or gaussian_blobs.
 
 
+Getting the dataset
+--------
+
+Here's a minimal example of how to download the dataset:
+
+```
+import requests, pickle
+url = 'https://github.com/greydanus/greydanus.github.io/raw/master/files/mnist1d_data.pkl'
+r = requests.get(url, allow_redirects=True)
+
+open('./mnist1d_data.pkl', 'wb').write(r.content)
+with open('./mnist1d_data.pkl', 'rb') as handle:
+    data = pickle.load(handle)
+    
+data.keys()
+
+>>> dict_keys(['x', 'x_test', 'y', 'y_test', 't', 'templates'])
+```
+
+A slightly better way to do things is to clone this repo and then use the `get_dataset` method in `data.py` to do essentially the same thing.
+
+
 Constructing the dataset
 --------
 
