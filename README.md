@@ -57,16 +57,17 @@ Here's a minimal example of how to download the dataset:
 
 ```
 import requests, pickle
+
 url = 'https://github.com/greydanus/greydanus.github.io/raw/master/files/mnist1d_data.pkl'
 r = requests.get(url, allow_redirects=True)
-
 open('./mnist1d_data.pkl', 'wb').write(r.content)
+
 with open('./mnist1d_data.pkl', 'rb') as handle:
     data = pickle.load(handle)
     
 data.keys()
 
->>> dict_keys(['x', 'x_test', 'y', 'y_test', 't', 'templates'])
+>>> dict_keys(['x', 'x_test', 'y', 'y_test', 't', 'templates'])  # these are NumPy arrays
 ```
 
 A slightly better way to do things is to clone this repo and then use the `get_dataset` method in `data.py` to do essentially the same thing.
