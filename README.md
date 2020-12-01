@@ -1,7 +1,7 @@
 The MNIST-1D dataset
 =======
 
-[Blog post]() | [Paper]()
+[Blog post](https://greydanus.github.io/2020/12/01/scaling-down/) | [Paper](https://arxiv.org/abs/2011.14439)
 
 Run in your browser
 --------
@@ -58,7 +58,7 @@ Here's a minimal example of how to download the dataset:
 ```
 import requests, pickle
 
-url = 'https://github.com/greydanus/greydanus.github.io/raw/master/files/mnist1d_data.pkl'
+url = 'https://github.com/greydanus/mnist1d/raw/master/mnist1d_data.pkl'
 r = requests.get(url, allow_redirects=True)
 open('./mnist1d_data.pkl', 'wb').write(r.content)
 

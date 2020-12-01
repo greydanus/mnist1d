@@ -19,7 +19,7 @@ def get_dataset_args(as_dict=False):
             'shuffle_seq': False,
             'final_seq_length': 40,
             'seed': 42,
-            'url': 'https://github.com/greydanus/greydanus.github.io/raw/master/files/mnist1d_data.pkl'}
+            'url': 'https://github.com/greydanus/mnist1d/raw/master/mnist1d_data.pkl'}
     return arg_dict if as_dict else ObjectView(arg_dict)
 
 
