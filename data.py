@@ -91,20 +91,20 @@ def get_dataset(args, path=None, verbose=True, download=True, regenerate=False, 
     path = './mnist1d_data{}.pkl'.format(shuffle) if path is None else path
 
     assert not (download and regenerate), "You can either download the o.g. MNIST1D dataset or generate your own - but not both"
-    # try:
-    if regenerate:
-        raise ValueError("Regenerating dataset") # yes this is hacky
-    if download:
-        print("Downloading MNIST1D dataset from {}".format(args.url))
-        r = requests.get(args.url, allow_redirects=True)
-        open(path, 'wb').write(r.content)
-        print("Saving to {}".format(path))
-    dataset = from_pickle(path)
-    if verbose:
-        print("Successfully loaded data from {}".format(path))
-    # except:
-    #     if verbose:
-    #         print("Did or could not load data from {}. Rebuilding dataset...".format(path))
-    #     dataset = make_dataset(args, **kwargs)
-    #     to_pickle(dataset, path)
+    try:
+        if regenerate:
+            raise ValueError("Regenerating dataset") # yes this is hacky
+        if download:
+            print("Downloading MNIST1D dataset from {}".format(args.url))
+            r = requests.get(args.url, allow_redirects=True)
+            open(path, 'wb').write(r.content)
+            print("Saving to {}".format(path))
+        dataset = from_pickle(path)
+        if verbose:
+            print("Successfully loaded data from {}".format(path))
+    except:
+        if verbose:
+            print("Did or could not load data from {}. Rebuilding dataset...".format(path))
+        dataset = make_dataset(args, **kwargs)
+        to_pickle(dataset, path)
     return dataset

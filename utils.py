@@ -16,7 +16,7 @@ def set_seed(seed):
 
 def to_pickle(thing, path): # save something
     with open(path, 'wb') as handle:
-        pickle.dump(thing, handle, protocol=5) # the prodocol we will use for this project
+        pickle.dump(thing, handle, protocol=4)
 
 
 def from_pickle(path): # load something
