@@ -22,7 +22,7 @@ def to_pickle(thing, path): # save something
 def from_pickle(path): # load something
     thing = None
     with open(path, 'rb') as handle:
-        thing = pickle.load(handle, protocol=5) # the prodocol we will use for this project
+        thing = pickle.load(handle)
     return thing
 
 class ObjectView(object):
