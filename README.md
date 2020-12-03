@@ -16,6 +16,7 @@ Run in your browser
   * [Metalearning an activation function](https://bit.ly/38V4GlQ)
   * [Benchmarking pooling methods](https://bit.ly/3lGmTqY)
 * Community use cases
+  * [TSNE: compare clustering of MNIST-1D vs. MNIST](https://colab.research.google.com/drive/1gUHCFoDd9pKbleyo3WOOPZtP3w5tH_fD?usp=sharing) (by [Dmitry Kobak](https://twitter.com/hippopedoid))
   * Send me a Colab link to your experiment and I'll feature it here.
 
 Overview
@@ -35,6 +36,7 @@ Machine learning models all get about the same test accuracy on MNIST. This data
 *Training the GRU takes at least 10x the walltime of the CNN.
 
 **The term "shuffle" refers to shuffling the spatial dimension of the dataset, as in [Zhang et al. (2017)](https://arxiv.org/abs/1611.03530).
+
 
 Motivation
 --------
@@ -71,6 +73,15 @@ data.keys()
 ```
 
 A slightly better way to do things is to clone this repo and then use the `get_dataset` method in `data.py` to do essentially the same thing.
+
+
+Dimensionality reduction
+--------
+The TSNE clusters below indicate that MNIST-1D is much less linearly separable than the original MNIST dataset. This means that nonlinear features are much more important for successful classification.
+
+![tsne.png](static/tsne.png)
+
+Thanks to [Dmitry Kobak](https://twitter.com/hippopedoid) for this contribution.
 
 
 Constructing the dataset
