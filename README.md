@@ -7,7 +7,7 @@ Run in your browser
 --------
 * Getting started
   * [Quickstart](https://bit.ly/3fghqVu)
-  * [Building MNIST-1D](https://colab.research.google.com/github/greydanus/mnist1d/blob/master/building_mnist1d.ipynb)
+  * [Building MNIST-1D](https://bit.ly/3ojC5v2)
 * Example use cases
   * Quantifying CNN spatial priors (see [second half of quickstart](https://bit.ly/3fghqVu))
   * [Finding lottery tickets](https://bit.ly/3nCEIaL)
