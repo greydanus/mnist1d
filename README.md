@@ -77,7 +77,7 @@ A slightly better way to do things is to clone this repo and then use the `get_d
 
 Dimensionality reduction
 --------
-The TSNE clusters below indicate that MNIST-1D is much less linearly separable than the original MNIST dataset. This means that nonlinear features are much more important for successful classification.
+The tSNE clusters below indicate that MNIST-1D is much less linearly separable than the original MNIST dataset. This means that nonlinear features are much more important for successful classification.
 
 ![tsne.png](static/tsne.png)
 
