@@ -8,6 +8,8 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
+from scipy.stats import bernoulli
+import copy
 
 from .utils import ObjectView
 
@@ -23,7 +25,8 @@ def get_model_args(as_dict=False):
           'eval_every': 250,
           'checkpoint_every': 1000,
           'device': 'cpu',
-          'seed': 42}
+          'seed': 42,
+          'dropout_rate': 0.1}
   return arg_dict if as_dict else ObjectView(arg_dict)
 
 
@@ -48,8 +51,12 @@ def train_model(dataset, model, args):
   for step in range(args.total_steps+1):
       bix = (step*args.batch_size)%len(x_train) # batch index
       x, y = x_train[bix:bix+args.batch_size], y_train[bix:bix+args.batch_size]
+      # data augmented SGD
+      retain_rate= 1 - args.dropout_rate
+      retain_mask = bernoulli.rvs(retain_rate, size=x.shape)
+      x_aug = x * retain_mask
       
-      loss = criterion(model(x), y)
+      loss = criterion(model(x_aug), y)
       results['train_losses'].append(loss.item())
       loss.backward() ; optimizer.step() ; optimizer.zero_grad()
 
