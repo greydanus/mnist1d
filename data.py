@@ -95,10 +95,12 @@ def get_dataset(args, path=None, verbose=True, download=True, regenerate=False, 
         if regenerate:
             raise ValueError("Regenerating dataset") # yes this is hacky
         if download:
-            print("Downloading MNIST1D dataset from {}".format(args.url))
+            if verbose:
+                print("Downloading MNIST1D dataset from {}".format(args.url))
             r = requests.get(args.url, allow_redirects=True)
             open(path, 'wb').write(r.content)
-            print("Saving to {}".format(path))
+            if verbose:
+                print("Saving to {}".format(path))
         dataset = from_pickle(path)
         if verbose:
             print("Successfully loaded data from {}".format(path))
