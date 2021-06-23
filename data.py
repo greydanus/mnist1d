@@ -2,6 +2,7 @@
 # Sam Greydanus
 
 import numpy as np
+import os
 import requests
 from .transform import transform
 from .utils import from_pickle, to_pickle, ObjectView, set_seed
@@ -95,10 +96,14 @@ def get_dataset(args, path=None, verbose=True, download=True, regenerate=False, 
         if regenerate:
             raise ValueError("Regenerating dataset") # yes this is hacky
         if download:
-            print("Downloading MNIST1D dataset from {}".format(args.url))
-            r = requests.get(args.url, allow_redirects=True)
-            open(path, 'wb').write(r.content)
-            print("Saving to {}".format(path))
+            if os.path.exists(path):
+                if verbose:
+                    print("File already exists. Skipping download.")
+            else:
+                print("Downloading MNIST1D dataset from {}".format(args.url))
+                r = requests.get(args.url, allow_redirects=True)
+                open(path, 'wb').write(r.content)
+                print("Saving to {}".format(path))
         dataset = from_pickle(path)
         if verbose:
             print("Successfully loaded data from {}".format(path))
