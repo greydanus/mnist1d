@@ -17,6 +17,7 @@ Run in your browser
   * [Benchmarking pooling methods](https://bit.ly/3lGmTqY)
 * Community use cases
   * [TSNE: compare clustering of MNIST-1D vs. MNIST](https://colab.research.google.com/drive/1gUHCFoDd9pKbleyo3WOOPZtP3w5tH_fD?usp=sharing) (by [Dmitry Kobak](https://twitter.com/hippopedoid))
+  * [A from-scratch, Numpy-only MLP with handwritten backprop](https://colab.research.google.com/drive/1E4w9chTkK-rPK-Zl-D0t4Q3FrdpQrHRQ?usp=sharing)
   * Send me a Colab link to your experiment and I'll feature it here.
 
 Overview
