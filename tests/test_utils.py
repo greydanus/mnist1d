@@ -5,15 +5,16 @@ from mnist1d.data import get_dataset, get_dataset_args
 from mnist1d.utils import set_seed, to_pickle, from_pickle, ObjectView
 import numpy as np
 
-from tempfile import NamedTemporaryFile
+from tempfile import mkstemp
 import pytest
+import os
 
 @pytest.fixture
 def tmpfile():
-    value = NamedTemporaryFile(delete=True)
-    print(value, value.file.name)
-    yield value.file.name
-    value.close()
+    handle, path = mkstemp()
+    print("temporarily using",path)
+    yield path
+    os.unlink(path)
 
 def test_seed_is_fixed():
 
