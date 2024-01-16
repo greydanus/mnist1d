@@ -24,7 +24,7 @@ jobs:
       - name: test dev version locally
         run: python -m pytest .
       
-  install: #installing the library
+  install: #installing the library as if one would not want to git-clone it
 
     runs-on: ubuntu-latest
     strategy:
