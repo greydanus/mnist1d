@@ -52,7 +52,7 @@ def test_get_dataset_args():
     assert 'seed' in defaults.keys()
     assert defaults['seed'] == 42
 
-def test_get_dataset(tmpfile: _TemporaryFileWrapper[bytes]):
+def test_get_dataset(tmpfile):
 
     defaults = get_dataset_args(as_dict=False)
     tmp = str(tmpfile)
