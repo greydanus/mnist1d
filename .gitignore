@@ -9,4 +9,6 @@
 *.tar
 *.zip
 # *.pkl # allow pickle files
-__pycache__.vscode
+__pycache__
+.vscode
+*~
