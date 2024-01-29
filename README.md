@@ -128,7 +128,7 @@ We obtain sparse "lottery ticket" masks as described by [Frankle & Carbin (2018)
 
 ![lottery_summary.png](static/lottery_summary_small.png)
 
-### [Observing deep double descent]([https://bit.ly/2UBWWNu](https://colab.research.google.com/drive/1pYHdmP0U6KYBzb3riqEk5PN3ULPRdtjL?usp=sharing))
+### [Observing deep double descent](https://colab.research.google.com/drive/1pYHdmP0U6KYBzb3riqEk5PN3ULPRdtjL?usp=sharing)
 We replicate the "deep double descent" phenomenon described by [Belkin et al. (2018)](https://arxiv.org/abs/1812.11118) and more recently studied at scale by [Nakkiran et al. (2019)](https://openai.com/blog/deep-double-descent/).
 
 ![deep_double_descent.png](static/deep_double_descent_small.png)
