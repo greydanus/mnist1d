@@ -11,7 +11,7 @@ Run in your browser
 * Example use cases
   * Quantifying CNN spatial priors (see [second half of quickstart](https://bit.ly/3fghqVu))
   * [Finding lottery tickets](https://bit.ly/3nCEIaL)
-  * [Observing deep double descent](https://bit.ly/2UBWWNu)
+  * [Observing deep double descent]([https://bit.ly/2UBWWNu](https://colab.research.google.com/drive/1pYHdmP0U6KYBzb3riqEk5PN3ULPRdtjL?usp=sharing))
   * [Metalearning a learning rate](https://bit.ly/38OSyTu)
   * [Metalearning an activation function](https://bit.ly/38V4GlQ)
   * [Benchmarking pooling methods](https://bit.ly/3lGmTqY)
@@ -125,8 +125,8 @@ We obtain sparse "lottery ticket" masks as described by [Frankle & Carbin (2018)
 
 ![lottery_summary.png](static/lottery_summary_small.png)
 
-### [Observing deep double descent](https://bit.ly/2UBWWNu)
-We replicate the "deep double descent" phenomenon described by [Belkin et al. (2018)](https://arxiv.org/abs/1812.11118) and more recently studied at scale by [Nakkiran et al. (2019)](https://openai.com/blog/deep-double-descent/). Importantly, we find that the location of the interpolation threshold depends on whether one uses MSE or NLL loss. In the case of MSE, it scales linearly with the number of output dimensions whereas in the case of NLL it remains constant.
+### [Observing deep double descent]([https://bit.ly/2UBWWNu](https://colab.research.google.com/drive/1pYHdmP0U6KYBzb3riqEk5PN3ULPRdtjL?usp=sharing))
+We replicate the "deep double descent" phenomenon described by [Belkin et al. (2018)](https://arxiv.org/abs/1812.11118) and more recently studied at scale by [Nakkiran et al. (2019)](https://openai.com/blog/deep-double-descent/).
 
 ![deep_double_descent.png](static/deep_double_descent_small.png)
 
