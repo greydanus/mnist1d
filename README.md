@@ -1,9 +1,8 @@
 The MNIST-1D dataset
 =======
+### _**News (Dec 5, 2023)**: MNIST-1D featured in Simon Prince's [Understanding Deep Learning](https://udlbook.github.io/udlbook/) textbook_
 
 [Blog post](https://greydanus.github.io/2020/12/01/scaling-down/) | [Paper](https://arxiv.org/abs/2011.14439)
-
-### _**News update (Dec 5, 2023)**: MNIST-1D is featured in Simon Prince's [Understanding Deep Learning](https://udlbook.github.io/udlbook/) textbook_
 
 
 Run in your browser
