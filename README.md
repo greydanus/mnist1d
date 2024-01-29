@@ -3,6 +3,9 @@ The MNIST-1D dataset
 
 [Blog post](https://greydanus.github.io/2020/12/01/scaling-down/) | [Paper](https://arxiv.org/abs/2011.14439)
 
+## $${\color{red}News update (Dec 5, 2023): MNIST-1D is featured in Simon Prince's [Understanding Deep Learning](https://udlbook.github.io/udlbook/) textbook}$$
+
+
 Run in your browser
 --------
 * Getting started
@@ -19,6 +22,7 @@ Run in your browser
   * [TSNE: compare clustering of MNIST-1D vs. MNIST](https://colab.research.google.com/drive/1gUHCFoDd9pKbleyo3WOOPZtP3w5tH_fD?usp=sharing) (by [Dmitry Kobak](https://twitter.com/hippopedoid))
   * [A from-scratch, Numpy-only MLP with handwritten backprop](https://colab.research.google.com/drive/1E4w9chTkK-rPK-Zl-D0t4Q3FrdpQrHRQ?usp=sharing)
   * Send me a Colab link to your experiment and I'll feature it here.
+
 
 Overview
 --------
