@@ -13,7 +13,7 @@ Run in your browser
 * Example use cases
   * Quantifying CNN spatial priors (see [second half of quickstart](https://bit.ly/3fghqVu))
   * [Finding lottery tickets](https://bit.ly/3nCEIaL)
-  * [Observing deep double descent]([https://bit.ly/2UBWWNu](https://colab.research.google.com/drive/1pYHdmP0U6KYBzb3riqEk5PN3ULPRdtjL?usp=sharing))
+  * [Observing deep double descent](https://colab.research.google.com/drive/1pYHdmP0U6KYBzb3riqEk5PN3ULPRdtjL?usp=sharing)
   * [Metalearning a learning rate](https://bit.ly/38OSyTu)
   * [Metalearning an activation function](https://bit.ly/38V4GlQ)
   * [Benchmarking pooling methods](https://bit.ly/3lGmTqY)
