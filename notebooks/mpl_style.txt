@@ -3,7 +3,6 @@ lines.linewidth: .75
 lines.markersize: 4
 
 #### * FONT *
-font.sans-serif: Arial
 font.size: 6
 
 #### * AXES *
