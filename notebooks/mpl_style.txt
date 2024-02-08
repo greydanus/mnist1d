@@ -1,0 +1,53 @@
+#### * LINES *
+lines.linewidth: .75
+lines.markersize: 4
+
+#### * FONT *
+font.sans-serif: Arial
+font.size: 6
+
+#### * AXES *
+axes.titlesize: 7    
+axes.labelsize: 6    
+axes.titlepad: 3
+axes.linewidth: .5
+axes.spines.right: False
+axes.spines.top: False
+axes.unicode_minus: True   
+
+#### * TICKS *
+xtick.major.width: .5
+ytick.major.width: .5
+xtick.minor.width: .5
+ytick.minor.width: .5
+xtick.major.size: 2
+ytick.major.size: 2
+xtick.minor.size: 1
+ytick.minor.size: 1
+xtick.major.pad: 1.5
+ytick.major.pad: 1.5
+xtick.top: False
+ytick.right: False
+xtick.labelsize: 6
+ytick.labelsize: 6
+
+#### * LEGEND *
+legend.fancybox: False
+legend.frameon: False
+legend.fontsize: 6
+
+#### * FIGURE *
+figure.constrained_layout.use: True
+figure.dpi: 135      
+figure.facecolor: white    
+figure.titlesize: 8  
+
+#### * IMAGES *
+image.cmap: tab10             
+
+#### * SCATTER PLOTS *
+scatter.marker: .               
+
+#### * SAVING FIGURES *
+savefig.dpi: 200           
+savefig.facecolor: white
