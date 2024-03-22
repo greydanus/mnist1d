@@ -17,6 +17,8 @@ requires-python = ">=3.7"
 keywords = ["dataset", "mnist", "machine learning", "deep learning", "1D"]
 license = {text = "Apache-2.0"}
 classifiers = [
+    "License :: OSI Approved :: Apache 2.0 License",
+    "Programming Language :: Python",
     "Framework :: Numpy",
     "Framework :: Scipy",
     "Programming Language :: Python :: 3",
@@ -36,8 +38,14 @@ all = ["torch","notebook"]
 [tool.setuptools]
 packages = ["mnist1d"]
 
-[tool.setuptools.exclude-package-data]
-mnist1d = ["notebooks/*"]
+# [tool.setuptools.packages.find]
+# where = ["mnist1d"]
+
+# [tool.setuptools.exclude-package-data]
+# mnist1d = ["notebooks/*", "static/*", "*pkl"]
+
+[project.urls]
+Homepage = "https://github.com/greydanus/mnist1d"
 
 # [project.scripts]
 # my-script = "my_package.module:function"
