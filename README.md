@@ -59,7 +59,7 @@ The original MNIST dataset is supposed to be the [Drosophilia of machine learnin
 Getting the dataset
 --------
 
-Here's a minimal example of how to download the dataset:
+Here's a minimal example of how to download the dataset (available with the github repository):
 
 ```
 import requests, pickle
@@ -94,6 +94,8 @@ defaults = get_dataset_args()
 data = make_dataset(defaults)
 x,y,t = data['x'], data['y'], data['t']
 ```
+
+If you want to play around with this, see [notebooks/mnist1d_tiny.ipynb](notebooks/mnist1d_tiny.ipynb).
 
 
 Dimensionality reduction

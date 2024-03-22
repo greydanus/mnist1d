@@ -31,7 +31,7 @@ dynamic = ["version"]
 
 [project.optional-dependencies]
 dev = ["pytest"]
-all = ["torch"]
+all = ["torch","notebook"]
 
 [tool.setuptools]
 packages = ["mnist1d"]
