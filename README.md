@@ -59,7 +59,7 @@ The original MNIST dataset is supposed to be the [Drosophilia of machine learnin
 Getting the dataset
 --------
 
-Here's a minimal example of how to download the dataset:
+Here's a minimal example of how to download the dataset (available with the github repository):
 
 ```
 import requests, pickle
@@ -76,7 +76,26 @@ data.keys()
 >>> dict_keys(['x', 'x_test', 'y', 'y_test', 't', 'templates'])  # these are NumPy arrays
 ```
 
-A slightly better way to do things is to clone this repo and then use the `get_dataset` method in `data.py` to do essentially the same thing.
+Building the dataset
+---------
+
+A slightly better way to do things is to clone this repo and then use the `get_dataset` method in `data.py` to do essentially the same thing. For this, you can build the repo locally.
+
+``` shell
+python -m pip install git+https://github.com/psteinb/mnist1d.git@master
+```
+
+This allows you to build the default dataset locally:
+
+```python
+from mnist1d.data import make_dataset, get_dataset_args
+
+defaults = get_dataset_args()
+data = make_dataset(defaults)
+x,y,t = data['x'], data['y'], data['t']
+```
+
+If you want to play around with this, see [notebooks/mnist1d_tiny.ipynb](notebooks/mnist1d_tiny.ipynb).
 
 
 Dimensionality reduction

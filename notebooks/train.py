@@ -1,5 +1,5 @@
-# The MNIST-1D dataset | 2020
-# Sam Greydanus
+# The MNIST-1D dataset | 2024
+# Peter Steinbach
 
 import time, copy
 import numpy as np
@@ -9,7 +9,13 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
 
-from .utils import ObjectView
+from mnist1d.utils import ObjectView
+
+def set_seed(seed):
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)
 
 def get_model_args(as_dict=False):
   arg_dict = {'input_size': 40,

@@ -1,0 +1,5 @@
+global-exclude notebooks/*
+global-exclude .git*
+global-exclude static/*
+global-exclude *png
+global-exclude *pkl
