@@ -7,7 +7,9 @@ name = "mnist1d"
 authors = [
     {name = "Sam Greydanus", email = "greydanus@users.noreply.github.com"},
     {name = "Peter Steinbach", email = "psteinb@users.noreply.github.com"},
-    {name = "Karim", email = "karim-53@users.noreply.github.com"}
+    {name = "Karim", email = "karim-53@users.noreply.github.com"},
+    {name = "Dmitry Kobak", email= "dmitry.kobak@uni-tuebingen.de"},
+    {name = "Jakob Jordan", email= "jakobjordan@posteo.de"}
 ]
 description = "A 1D analogue of the MNIST dataset for measuring spatial biases and answering Science of Deep Learning questions"
 readme = "README.md"
