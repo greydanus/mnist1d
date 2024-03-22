@@ -34,5 +34,8 @@ all = ["torch"]
 [tool.setuptools]
 packages = ["mnist1d"]
 
+[tool.setuptools.exclude-package-data]
+mnist1d = ["notebooks/*"]
+
 # [project.scripts]
 # my-script = "my_package.module:function"
