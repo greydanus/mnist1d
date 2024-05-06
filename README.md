@@ -14,11 +14,11 @@ Quickstart and use cases
 --------
 * Getting started
   * [1. Quickstart](https://github.com/greydanus/mnist1d/blob/master/notebooks/1.%20quickstart.ipynb) ([Colab](https://githubtocolab.com/greydanus/mnist1d/blob/master/notebooks/1.%20quickstart.ipynb))
-  * [2. Building MNIST-1D](https://github.com/greydanus/mnist1d/blob/master/notebooks/2.%20building_mnist1d.ipynb)
-  * [3. Pip installation (3 lines)](https://github.com/greydanus/mnist1d/blob/master/notebooks/3.%20mnist1d_pip.ipynb)
+  * [2. Building MNIST-1D](https://github.com/greydanus/mnist1d/blob/master/notebooks/2.%20building_mnist1d.ipynb) ([Colab](https://githubtocolab.com/greydanus/mnist1d/blob/master/notebooks/2.%20building_mnist1d.ipynb))
+  * [3. Pip installation (3 lines)](https://github.com/greydanus/mnist1d/blob/master/notebooks/3.%20mnist1d_pip.ipynb) ([Colab](https://githubtocolab.com/greydanus/mnist1d/blob/master/notebooks/3.%20mnist1d_pip.ipynb))
 * Example use cases
   * Quantifying CNN spatial priors (see [second half of quickstart](https://github.com/greydanus/mnist1d/blob/master/notebooks/1.%20quickstart.ipynb) )
-  * [Self-supervised learning](https://github.com/greydanus/mnist1d/blob/master/notebooks/4.%20self-supervised-learning.ipynb)
+  * [Self-supervised learning](https://github.com/greydanus/mnist1d/blob/master/notebooks/4.%20self-supervised-learning.ipynb) ([Colab](https://githubtocolab.com/greydanus/mnist1d/blob/master/notebooks/4.%20self-supervised-learning.ipynb))
   * [Finding lottery tickets](https://bit.ly/3nCEIaL)
   * [Observing deep double descent](https://colab.research.google.com/drive/1pYHdmP0U6KYBzb3riqEk5PN3ULPRdtjL?usp=sharing)
   * [Metalearning a learning rate](https://bit.ly/38OSyTu)
