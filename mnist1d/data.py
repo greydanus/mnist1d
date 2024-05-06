@@ -4,6 +4,7 @@
 import numpy as np
 import os
 import requests
+import mnist1d
 from mnist1d.transform import transform
 from mnist1d.utils import from_pickle, to_pickle, ObjectView, set_seed
 
