@@ -76,11 +76,20 @@ The original MNIST dataset is supposed to be the [Drosophilia of machine learnin
 * **Easy to hack.** There's an API for adjusting max_translation, corr_noise_scale, shear_scale, final_seq_length and more. The code is clean and modular.
 * **Still has some real-world relevance.** Though it's low-dimensional and synthetic, this task is arguably more interesting than [Sklearn's datasets](https://scikit-learn.org/stable/modules/classes.html#module-sklearn.datasets) such as two_moons, two_circles, or gaussian_blobs.
 
+Dimensionality reduction
+--------
+
+Visualizing the MNIST and MNIST-1D datasets with tSNE. The well-defined clusters in the MNIST plot indicate that the majority of the examples are separable via a kNN classifier in pixel space. The MNIST-1D plot, meanwhile, reveals a lack of well-defined clusters which suggests that learning a nonlinear representation of the data is much more important to achieve successful classification.
+
+![tsne.png](static/tsne.png)
+
+Thanks to [Dmitry Kobak](https://twitter.com/hippopedoid) for this contribution.
+
 
 Downloading the dataset
 --------
 
-Here's a minimal example of how to download the dataset. This is slightly worse than installing this repo with pip and generating it from scratch, but it's useful for some cases, and also for double-checking that the procedurally generated dataset exactly matches the one used in the paper and blog post:
+Here's a minimal example of how to download the dataset. This is slightly worse than installing this repo with pip and generating it from scratch. It does have its uses. Sometimes I use it for double-checking that the procedurally generated dataset exactly matches the one used in the paper and blog post:
 
 ```
 import requests, pickle
@@ -96,16 +105,6 @@ data.keys()
 
 >>> dict_keys(['x', 'x_test', 'y', 'y_test', 't', 'templates'])  # these are NumPy arrays
 ```
-
-
-Dimensionality reduction
---------
-
-Visualizing the MNIST and MNIST-1D datasets with tSNE. The well-defined clusters in the MNIST plot indicate that the majority of the examples are separable via a kNN classifier in pixel space. The MNIST-1D plot, meanwhile, reveals a lack of well-defined clusters which suggests that learning a nonlinear representation of the data is much more important to achieve successful classification.
-
-![tsne.png](static/tsne.png)
-
-Thanks to [Dmitry Kobak](https://twitter.com/hippopedoid) for this contribution.
 
 
 Constructing the dataset
