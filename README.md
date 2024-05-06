@@ -10,7 +10,7 @@ _**Dec 5, 2023**: MNIST-1D is now a core teaching dataset in Simon Prince's [Und
 
 ![overview.png](static/overview.png)
 
-Quickstart and Use Cases
+Quickstart and use cases
 --------
 * Getting started
   * [Quickstart](https://bit.ly/3fghqVu)
@@ -29,7 +29,7 @@ Quickstart and Use Cases
   * Send me a Colab link to your experiment and I'll feature it here.
 
 
-Installing with Pip
+Installing with `pip`
 --------
 
 ``` shell
