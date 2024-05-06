@@ -13,11 +13,12 @@ _**Dec 5, 2023**: MNIST-1D is now a core teaching dataset in Simon Prince's [Und
 Quickstart and use cases
 --------
 * Getting started
-  * [Quickstart](https://bit.ly/3fghqVu)
-  * [Building MNIST-1D](https://bit.ly/3ojC5v2)
-  * [Generating MNIST-1D after Pip install (3 lines)](https://github.com/greydanus/mnist1d/blob/master/notebooks/mnist1d_pip.ipynb)
+  * [1. Quickstart](https://github.com/greydanus/mnist1d/blob/master/notebooks/1.%20quickstart.ipynb) ([Colab](https://githubtocolab.com/greydanus/mnist1d/blob/master/notebooks/1.%20quickstart.ipynb))
+  * [2. Building MNIST-1D](https://github.com/greydanus/mnist1d/blob/master/notebooks/2.%20building_mnist1d.ipynb)
+  * [3. Pip installation (3 lines)](https://github.com/greydanus/mnist1d/blob/master/notebooks/3.%20mnist1d_pip.ipynb)
 * Example use cases
-  * Quantifying CNN spatial priors (see [second half of quickstart](https://bit.ly/3fghqVu))
+  * Quantifying CNN spatial priors (see [second half of quickstart](https://github.com/greydanus/mnist1d/blob/master/notebooks/1.%20quickstart.ipynb) )
+  * [Self-supervised learning](https://github.com/greydanus/mnist1d/blob/master/notebooks/4.%20self-supervised-learning.ipynb)
   * [Finding lottery tickets](https://bit.ly/3nCEIaL)
   * [Observing deep double descent](https://colab.research.google.com/drive/1pYHdmP0U6KYBzb3riqEk5PN3ULPRdtjL?usp=sharing)
   * [Metalearning a learning rate](https://bit.ly/38OSyTu)
@@ -46,7 +47,7 @@ data = make_dataset(defaults)
 x,y,t = data['x'], data['y'], data['t']
 ```
 
-If you want to play around with this, see [notebooks/mnist1d_pip.ipynb](notebooks/mnist1d_pip.ipynb).
+If you want to play around with this, see [notebooks/3. mnist1d_pip.ipynb](https://github.com/greydanus/mnist1d/blob/master/notebooks/3.%20mnist1d_pip.ipynb).
 
 
 Comparing MNIST and MNIST-1D
@@ -135,7 +136,7 @@ Example use cases
 --------
 
 ### Quantifying CNN spatial priors
-For a fixed number of training examples, we show that a CNN achieves far better test generalization than a comparable MLP. This highlights the value of the inductive biases that we build into ML models. For code, see the [second half of the quickstart](https://colab.research.google.com/github/greydanus/mnist1d/blob/master/quickstart.ipynb).
+For a fixed number of training examples, we show that a CNN achieves far better test generalization than a comparable MLP. This highlights the value of the inductive biases that we build into ML models. For code, see the [second half of the quickstart](https://github.com/greydanus/mnist1d/blob/master/notebooks/1.%20quickstart.ipynb).
 
 ![benchmarks.png](static/benchmarks_small.png)
 
