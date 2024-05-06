@@ -8,6 +8,8 @@
 .pytest_cache
 *.tar
 *.zip
+notebooks/*.pkl
+notebooks/mnist1d
 # *.pkl # allow pickle files
 __pycache__
 .vscode

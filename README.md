@@ -15,7 +15,7 @@ Quickstart and use cases
 * Getting started
   * [Quickstart](https://bit.ly/3fghqVu)
   * [Building MNIST-1D](https://bit.ly/3ojC5v2)
-  * [Generating MNIST-1D after Pip install (3 lines)](https://github.com/greydanus/mnist1d/blob/master/notebooks/mnist1d_tiny.ipynb)
+  * [Generating MNIST-1D after Pip install (3 lines)](https://github.com/greydanus/mnist1d/blob/master/notebooks/mnist1d_pip.ipynb)
 * Example use cases
   * Quantifying CNN spatial priors (see [second half of quickstart](https://bit.ly/3fghqVu))
   * [Finding lottery tickets](https://bit.ly/3nCEIaL)
@@ -46,7 +46,7 @@ data = make_dataset(defaults)
 x,y,t = data['x'], data['y'], data['t']
 ```
 
-If you want to play around with this, see [notebooks/mnist1d_tiny.ipynb](notebooks/mnist1d_tiny.ipynb).
+If you want to play around with this, see [notebooks/mnist1d_pip.ipynb](notebooks/mnist1d_pip.ipynb).
 
 
 Comparing MNIST and MNIST-1D
