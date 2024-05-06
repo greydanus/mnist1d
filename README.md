@@ -1,4 +1,4 @@
-The MNIST-1D taset
+The MNIST-1D Dataset
 =======
 
 [Blog post](https://greydanus.github.io/2020/12/01/scaling-down/) | [Paper](https://arxiv.org/abs/2011.14439)
@@ -9,6 +9,23 @@ Most machine learning models get around the same ~99% test accuracy on MNIST. Th
 _**Dec 5, 2023**: MNIST-1D is now a core teaching dataset in Simon Prince's [Understanding Deep Learning](https://udlbook.github.io/udlbook/) textbook_
 
 ![overview.png](static/overview.png)
+
+Quickstart and Use Cases
+--------
+* Getting started
+  * [Quickstart](https://bit.ly/3fghqVu)
+  * [Building MNIST-1D](https://bit.ly/3ojC5v2)
+* Example use cases
+  * Quantifying CNN spatial priors (see [second half of quickstart](https://bit.ly/3fghqVu))
+  * [Finding lottery tickets](https://bit.ly/3nCEIaL)
+  * [Observing deep double descent](https://colab.research.google.com/drive/1pYHdmP0U6KYBzb3riqEk5PN3ULPRdtjL?usp=sharing)
+  * [Metalearning a learning rate](https://bit.ly/38OSyTu)
+  * [Metalearning an activation function](https://bit.ly/38V4GlQ)
+  * [Benchmarking pooling methods](https://bit.ly/3lGmTqY)
+* Community use cases
+  * [TSNE: compare clustering of MNIST-1D vs. MNIST](https://colab.research.google.com/drive/1gUHCFoDd9pKbleyo3WOOPZtP3w5tH_fD?usp=sharing) (by [Dmitry Kobak](https://twitter.com/hippopedoid))
+  * [A from-scratch, Numpy-only MLP with handwritten backprop](https://colab.research.google.com/drive/1E4w9chTkK-rPK-Zl-D0t4Q3FrdpQrHRQ?usp=sharing)
+  * Send me a Colab link to your experiment and I'll feature it here.
 
 
 Installing with Pip
@@ -31,31 +48,8 @@ x,y,t = data['x'], data['y'], data['t']
 If you want to play around with this, see [notebooks/mnist1d_tiny.ipynb](notebooks/mnist1d_tiny.ipynb).
 
 
-Running in your browser
+The numbers
 --------
-* Getting started
-  * [Quickstart](https://bit.ly/3fghqVu)
-  * [Building MNIST-1D](https://bit.ly/3ojC5v2)
-* Example use cases
-  * Quantifying CNN spatial priors (see [second half of quickstart](https://bit.ly/3fghqVu))
-  * [Finding lottery tickets](https://bit.ly/3nCEIaL)
-  * [Observing deep double descent](https://colab.research.google.com/drive/1pYHdmP0U6KYBzb3riqEk5PN3ULPRdtjL?usp=sharing)
-  * [Metalearning a learning rate](https://bit.ly/38OSyTu)
-  * [Metalearning an activation function](https://bit.ly/38V4GlQ)
-  * [Benchmarking pooling methods](https://bit.ly/3lGmTqY)
-* Community use cases
-  * [TSNE: compare clustering of MNIST-1D vs. MNIST](https://colab.research.google.com/drive/1gUHCFoDd9pKbleyo3WOOPZtP3w5tH_fD?usp=sharing) (by [Dmitry Kobak](https://twitter.com/hippopedoid))
-  * [A from-scratch, Numpy-only MLP with handwritten backprop](https://colab.research.google.com/drive/1E4w9chTkK-rPK-Zl-D0t4Q3FrdpQrHRQ?usp=sharing)
-  * Send me a Colab link to your experiment and I'll feature it here.
-
-
-Overview
---------
-
-Machine learning models all get about the same test accuracy on MNIST. This dataset is smaller than MNIST and does a better job of separating good models from the bad.
-
-![overview.png](static/overview.png)
-
 
 | Dataset		| Logistic regression		| MLP 	| CNN 	| GRU* | Human expert |
 | ------------- 			| :---------------: | :---------------: | :---------------: | :---------------: | :---------------: |
@@ -68,8 +62,6 @@ Machine learning models all get about the same test accuracy on MNIST. This data
 **The term "shuffle" refers to shuffling the spatial dimension of the dataset, as in [Zhang et al. (2017)](https://arxiv.org/abs/1611.03530).
 
 
-Motivation
---------
 The original MNIST dataset is supposed to be the [Drosophilia of machine learning](https://twitter.com/ivanukhov/status/639122460722528257) but it has a few drawbacks:
 * **Discrimination between models.** The difference between major ML models comes down to a few percentage points.
 * **Dimensionality.** Examples are 784-dimensional vectors so training ML models can take non-trivial compute and memory (think neural architecture search and metalearning).
@@ -82,10 +74,10 @@ The original MNIST dataset is supposed to be the [Drosophilia of machine learnin
 * **Still has some real-world relevance.** Though it's low-dimensional and synthetic, this task is arguably more interesting than [Sklearn's datasets](https://scikit-learn.org/stable/modules/classes.html#module-sklearn.datasets) such as two_moons, two_circles, or gaussian_blobs.
 
 
-Downloading the dataset (a slightly worse option which doesn't use Pip)
+Downloading the dataset
 --------
 
-Here's a minimal example of how to download the dataset (available with the github repository):
+Here's a minimal example of how to download the dataset. This is slightly worse than installing this repo with pip and generating it from scratch, but it's useful for some cases, and also for double-checking that the procedurally generated dataset exactly matches the one used in the paper and blog post:
 
 ```
 import requests, pickle
