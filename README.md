@@ -1,8 +1,14 @@
 The MNIST-1D dataset
 =======
-### _**Dec 5, 2023**: MNIST-1D featured in Simon Prince's [Understanding Deep Learning](https://udlbook.github.io/udlbook/) textbook_
 
 [Blog post](https://greydanus.github.io/2020/12/01/scaling-down/) | [Paper](https://arxiv.org/abs/2011.14439)
+
+
+Machine learning models all get about the same test accuracy on MNIST. This dataset is smaller than MNIST and does a better job of separating good models from the bad.
+
+![overview.png](static/overview.png)
+
+_**Dec 5, 2023**: MNIST-1D featured in Simon Prince's [Understanding Deep Learning](https://udlbook.github.io/udlbook/) textbook_
 
 
 Installing with Pip
