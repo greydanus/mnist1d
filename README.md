@@ -49,7 +49,7 @@ x,y,t = data['x'], data['y'], data['t']
 If you want to play around with this, see [notebooks/mnist1d_tiny.ipynb](notebooks/mnist1d_tiny.ipynb).
 
 
-The numbers
+Comparing MNIST and MNIST-1D
 --------
 
 | Dataset		| Logistic regression		| MLP 	| CNN 	| GRU* | Human expert |
@@ -62,6 +62,8 @@ The numbers
 
 **The term "shuffle" refers to shuffling the spatial dimension of the dataset, as in [Zhang et al. (2017)](https://arxiv.org/abs/1611.03530).
 
+
+-----------
 
 The original MNIST dataset is supposed to be the [Drosophilia of machine learning](https://twitter.com/ivanukhov/status/639122460722528257) but it has a few drawbacks:
 * **Discrimination between models.** The difference between major ML models comes down to a few percentage points.
@@ -130,7 +132,7 @@ In order to build the synthetic dataset, we pass the templates through a series 
 Unlike the original MNIST dataset, which consisted of 2D arrays of pixels (each image had 28x28=784 dimensions), this dataset consists of 1D timeseries of length 40. This means each example is ~20x smaller, making the dataset much quicker and easier to iterate over. Another nice thing about this toy dataset is that it does a good job of separating different types of deep learning models, many of which get the same 98-99% test accuracy on MNIST.
 
 
-Example Use Cases
+Example use cases
 --------
 
 ### Quantifying CNN spatial priors
