@@ -1,14 +1,14 @@
-The MNIST-1D dataset
+The MNIST-1D taset
 =======
 
 [Blog post](https://greydanus.github.io/2020/12/01/scaling-down/) | [Paper](https://arxiv.org/abs/2011.14439)
 
 
-Machine learning models all get about the same test accuracy on MNIST. This dataset is smaller than MNIST and does a better job of separating good models from the bad.
+Most machine learning models get around the same ~99% test accuracy on MNIST. The dataset in this repo, MNIST-1D, is 20x smaller and does a better job of separating between models with/without nonlinearity and models with/without spatial inductive biases.
+
+_**Dec 5, 2023**: MNIST-1D is now a core teaching dataset in Simon Prince's [Understanding Deep Learning](https://udlbook.github.io/udlbook/) textbook_
 
 ![overview.png](static/overview.png)
-
-_**Dec 5, 2023**: MNIST-1D featured in Simon Prince's [Understanding Deep Learning](https://udlbook.github.io/udlbook/) textbook_
 
 
 Installing with Pip
