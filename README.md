@@ -13,7 +13,7 @@ _**Dec 5, 2023**: MNIST-1D is now a core teaching dataset in Simon Prince's [Und
 Quickstart and use cases
 --------
 * Getting started
-  * [1. Quickstart](https://github.com/greydanus/mnist1d/blob/master/notebooks/1.%20quickstart.ipynb)
+  * [1. Quickstart](https://github.com/greydanus/mnist1d/blob/master/notebooks/1.%20quickstart.ipynb) ([Colab](https://githubtocolab.com/greydanus/mnist1d/blob/master/notebooks/1.%20quickstart.ipynb))
   * [2. Building MNIST-1D](https://github.com/greydanus/mnist1d/blob/master/notebooks/2.%20building_mnist1d.ipynb)
   * [3. Pip installation (3 lines)](https://github.com/greydanus/mnist1d/blob/master/notebooks/3.%20mnist1d_pip.ipynb)
 * Example use cases
