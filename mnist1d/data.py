@@ -4,10 +4,22 @@
 import numpy as np
 import os
 import requests
-from .transform import transform
-from .utils import from_pickle, to_pickle, ObjectView, set_seed
+from mnist1d.transform import transform
+from mnist1d.utils import from_pickle, to_pickle, ObjectView, set_seed
 
 def get_dataset_args(as_dict=False):
+    """ Generate dictionary with dataset properties
+
+    Parameters
+    ----------
+    as_dict : bool, optional
+        if true, return the dataset properties as dictionary; if false, return an ObjectView, by default False
+
+    Returns
+    -------
+    _type_
+        _description_
+    """
     arg_dict = {'num_samples': 5000,
             'train_split': 0.8,
             'template_len': 12,
@@ -51,7 +63,7 @@ def get_templates():
 def make_dataset(args=None, template=None, ):
     templates = get_templates() if template is None else template
     args = get_dataset_args() if args is None else args
-    np.random.seed(args.seed) # reproducibility
+    set_seed(args.seed) # reproducibility
     
     xs, ys = [], []
     samples_per_class = args.num_samples // len(templates['y'])
@@ -84,6 +96,7 @@ def make_dataset(args=None, template=None, ):
 
 
 # we'll cache the dataset so that it doesn't have to be rebuild every time
+# args must not be a dict
 def get_dataset(args, path=None, verbose=True, download=True, regenerate=False, **kwargs):
     if 'args' in kwargs.keys() and kwargs['args'].shuffle_seq:
         shuffle = "_shuffle"

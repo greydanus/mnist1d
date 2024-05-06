@@ -1,18 +1,15 @@
-# The MNIST-1D dataset | 2020
-# Sam Greydanus
+# The MNIST-1D dataset | 2024
+# Sam Greydanus, Peter Steinbach
 
 import numpy as np
-import torch
 import random
 import pickle
 import matplotlib.pyplot as plt
-from .transform import transform
+from mnist1d.transform import transform
 
 def set_seed(seed):
     random.seed(seed)
     np.random.seed(seed)
-    torch.manual_seed(seed)
-    torch.cuda.manual_seed_all(seed)
 
 def to_pickle(thing, path): # save something
     with open(path, 'wb') as handle:
@@ -20,10 +17,10 @@ def to_pickle(thing, path): # save something
 
 
 def from_pickle(path): # load something
-    thing = None
+    value = None
     with open(path, 'rb') as handle:
-        thing = pickle.load(handle)
-    return thing
+        value = pickle.load(handle)
+    return value
 
 class ObjectView(object):
     def __init__(self, d): self.__dict__ = d

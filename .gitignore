@@ -10,3 +10,5 @@
 *.zip
 # *.pkl # allow pickle files
 __pycache__
+.vscode
+*~
