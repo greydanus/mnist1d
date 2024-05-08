@@ -18,12 +18,12 @@ Quickstart and use cases
   * [3. Pip installation (3 lines)](https://github.com/greydanus/mnist1d/blob/master/notebooks/3.%20mnist1d_pip.ipynb) ([Colab](https://githubtocolab.com/greydanus/mnist1d/blob/master/notebooks/3.%20mnist1d_pip.ipynb))
 * Example use cases
   * Quantifying CNN spatial priors (see [second half of quickstart](https://github.com/greydanus/mnist1d/blob/master/notebooks/1.%20quickstart.ipynb) )
-  * [Self-supervised learning](https://github.com/greydanus/mnist1d/blob/master/notebooks/4.%20self-supervised-learning.ipynb) ([Colab](https://githubtocolab.com/greydanus/mnist1d/blob/master/notebooks/4.%20self-supervised-learning.ipynb))
-  * [Finding lottery tickets](https://bit.ly/3nCEIaL)
-  * [Observing deep double descent](https://colab.research.google.com/drive/1pYHdmP0U6KYBzb3riqEk5PN3ULPRdtjL?usp=sharing)
-  * [Metalearning a learning rate](https://bit.ly/38OSyTu)
-  * [Metalearning an activation function](https://bit.ly/38V4GlQ)
-  * [Benchmarking pooling methods](https://bit.ly/3lGmTqY)
+  * [4. Self-supervised learning](https://github.com/greydanus/mnist1d/blob/master/notebooks/4.%20self-supervised-learning.ipynb) ([Colab](https://githubtocolab.com/greydanus/mnist1d/blob/master/notebooks/4.%20self-supervised-learning.ipynb))
+  * [5. Finding lottery tickets](https://github.com/greydanus/mnist1d/blob/master/notebooks/5.%20lottery_tickets.ipynb) ([Colab](https://githubtocolab.com/greydanus/mnist1d/blob/master/notebooks/5.%20lottery_tickets.ipynb))
+  * [6. Observing deep double descent](https://github.com/greydanus/mnist1d/blob/master/notebooks/6.%20deep_double_descent.ipynb) ([Colab](https://githubtocolab.com/greydanus/mnist1d/blob/master/notebooks/6.%20deep_double_descent.ipynb))
+  * [7. Metalearning a learning rate](https://github.com/greydanus/mnist1d/blob/master/notebooks/7.%20metalearn_learn_rate.ipynb) ([Colab](https://githubtocolab.com/greydanus/mnist1d/blob/master/notebooks/7.%20metalearn_learn_rate.ipynb))
+  * [8. Metalearning an activation function](https://github.com/greydanus/mnist1d/blob/master/notebooks/8.%20metalearn_activation_function.ipynb) ([Colab](https://githubtocolab.com/greydanus/mnist1d/blob/master/notebooks/8.%20metalearn_activation_function.ipynb))
+  * [9. Benchmarking pooling methods](https://github.com/greydanus/mnist1d/blob/master/notebooks/9.%20benchmark_pooling.ipynb) ([Colab](https://githubtocolab.com/greydanus/mnist1d/blob/master/notebooks/9.%20benchmark_pooling.ipynb))
 * Community use cases
   * [TSNE: compare clustering of MNIST-1D vs. MNIST](https://colab.research.google.com/drive/1gUHCFoDd9pKbleyo3WOOPZtP3w5tH_fD?usp=sharing) (by [Dmitry Kobak](https://twitter.com/hippopedoid))
   * [A from-scratch, Numpy-only MLP with handwritten backprop](https://colab.research.google.com/drive/1E4w9chTkK-rPK-Zl-D0t4Q3FrdpQrHRQ?usp=sharing)
@@ -140,29 +140,29 @@ For a fixed number of training examples, we show that a CNN achieves far better 
 
 ![benchmarks.png](static/benchmarks_small.png)
 
-### [Finding lottery tickets](https://bit.ly/3nCEIaL)
+### [Finding lottery tickets](https://githubtocolab.com/greydanus/mnist1d/blob/master/notebooks/5.%20lottery_tickets.ipynb)
 We obtain sparse "lottery ticket" masks as described by [Frankle & Carbin (2018)](https://arxiv.org/abs/1803.03635). Then we perform some ablation studies and analysis on them to determine exactly what makes these masks special (spoiler: they have spatial priors including local connectivity). One result, which contradicts the original paper, is that lottery ticket masks can be beneficial even under different initial weights. We suspect this effect is present but vanishingly small in the experiments performed by Frankle & Carbin.
 
 ![lottery.png](static/lottery.png)
 
 ![lottery_summary.png](static/lottery_summary_small.png)
 
-### [Observing deep double descent](https://colab.research.google.com/drive/1pYHdmP0U6KYBzb3riqEk5PN3ULPRdtjL?usp=sharing)
+### [Observing deep double descent](https://githubtocolab.com/greydanus/mnist1d/blob/master/notebooks/6.%20deep_double_descent.ipynb)
 We replicate the "deep double descent" phenomenon described by [Belkin et al. (2018)](https://arxiv.org/abs/1812.11118) and more recently studied at scale by [Nakkiran et al. (2019)](https://openai.com/blog/deep-double-descent/).
 
 ![deep_double_descent.png](static/deep_double_descent_small.png)
 
-### [Metalearning a learning rate](https://bit.ly/38OSyTu)
+### [Metalearning a learning rate](https://githubtocolab.com/greydanus/mnist1d/blob/master/notebooks/7.%20metalearn_learn_rate.ipynb)
 A simple notebook that introduces gradient-based metalearning, also known as "unrolled optimization." In the spirit of [Maclaurin et al (2015)](http://proceedings.mlr.press/v37/maclaurin15.pdf) we use this technique to obtain the optimal learning rate for an MLP.
 
 ![metalearn_lr.png](static/metalearn_lr.png)
 
-### [Metalearning an activation function](https://bit.ly/38V4GlQ)
+### [Metalearning an activation function](https://githubtocolab.com/greydanus/mnist1d/blob/master/notebooks/8.%20metalearn_activation_function.ipynb)
 This project uses the same principles as the learning rate example, but tackles a new problem that (to our knowledge) has not been tackled via gradient-based metalearning: how to obtain the perfect nonlinearity for a neural network. We start from an ELU activation function and parameterize the offset with an MLP. We use unrolled optimization to find the offset that leads to lowest training loss, across the last 200 steps, for an MLP classifier trained on MNIST-1D. Interestingly, the result somewhat resembles the Swish activation described by [Ramachandran et al. (2017)](https://arxiv.org/abs/1710.05941); the main difference is a positive regime between -4 and -1.
 
 ![metalearn_afunc.png](static/metalearn_afunc.png)
 
-### [Benchmarking pooling methods](https://bit.ly/3lGmTqY)
+### [Benchmarking pooling methods](https://githubtocolab.com/greydanus/mnist1d/blob/master/notebooks/9.%20benchmark_pooling.ipynb)
 We investigate the relationship between number of training samples and usefulness of pooling methods. We find that pooling is typically very useful in the low-data regime but this advantage diminishes as the amount of training data increases.
 
 ![pooling.png](static/pooling.png)
