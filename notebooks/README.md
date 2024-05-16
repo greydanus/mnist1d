@@ -11,4 +11,4 @@ git clone https://github.com/greydanus/mnist1d.git
 cd mnist1d
 python -m pip install '.[all]'
 ```
-3. run the notebooks, [quickstart.ipynb](quickstart.ipynb) or [mnist1d_tiny.ipynb](mnist1d_tiny.ipynb) are a good start.
+3. run the notebooks, [quickstart.ipynb](quickstart.ipynb) or [mnist1d_tiny.ipynb](mnist1d-pip.ipynb) are a good start.
