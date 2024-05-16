@@ -17,13 +17,13 @@ Quickstart and use cases
   * [2. Building MNIST-1D](https://github.com/greydanus/mnist1d/blob/master/notebooks/building-mnist1d.ipynb) ([Colab](https://githubtocolab.com/greydanus/mnist1d/blob/master/notebooks/building-mnist1d.ipynb))
   * [3. Pip installation (3 lines)](https://github.com/greydanus/mnist1d/blob/master/notebooks/mnist1d-pip.ipynb) ([Colab](https://githubtocolab.com/greydanus/mnist1d/blob/master/notebooks/mnist1d-pip.ipynb))
 * Example use cases
-  *  [Quantifying CNN spatial priors](https://github.com/greydanus/mnist1d/blob/master/notebooks/mnist1d-classification.ipynb) ([Colab](https://githubtocolab.com/greydanus/mnist1d/blob/master/notebooks/mnist1d-classification.ipynb))
-  * [4. Self-supervised learning](https://github.com/greydanus/mnist1d/blob/master/notebooks/self-supervised-learning.ipynb) ([Colab](https://githubtocolab.com/greydanus/mnist1d/blob/master/notebooks/self-supervised-learning.ipynb))
-  * [5. Finding lottery tickets](https://github.com/greydanus/mnist1d/blob/master/notebooks/lottery-tickets.ipynb) ([Colab](https://githubtocolab.com/greydanus/mnist1d/blob/master/notebooks/lottery-tickets.ipynb))
-  * [6. Observing deep double descent](https://github.com/greydanus/mnist1d/blob/master/notebooks/deep-double_descent.ipynb) ([Colab](https://githubtocolab.com/greydanus/mnist1d/blob/master/notebooks/deep-double-descent.ipynb))
-  * [7. Metalearning a learning rate](https://github.com/greydanus/mnist1d/blob/master/notebooks/metalearn-learn-rate.ipynb) ([Colab](https://githubtocolab.com/greydanus/mnist1d/blob/master/notebooks/metalearn-learn-rate.ipynb))
-  * [8. Metalearning an activation function](https://github.com/greydanus/mnist1d/blob/master/notebooks/metalearn-activation-function.ipynb) ([Colab](https://githubtocolab.com/greydanus/mnist1d/blob/master/notebooks/metalearn-activation-function.ipynb))
-  * [9. Benchmarking pooling methods](https://github.com/greydanus/mnist1d/blob/master/notebooks/benchmark-pooling.ipynb) ([Colab](https://githubtocolab.com/greydanus/mnist1d/blob/master/notebooks/benchmark-pooling.ipynb))
+  *  [4. Quantifying CNN spatial priors](https://github.com/greydanus/mnist1d/blob/master/notebooks/mnist1d-classification.ipynb) ([Colab](https://githubtocolab.com/greydanus/mnist1d/blob/master/notebooks/mnist1d-classification.ipynb))
+  * [5. Self-supervised learning](https://github.com/greydanus/mnist1d/blob/master/notebooks/self-supervised-learning.ipynb) ([Colab](https://githubtocolab.com/greydanus/mnist1d/blob/master/notebooks/self-supervised-learning.ipynb))
+  * [6. Finding lottery tickets](https://github.com/greydanus/mnist1d/blob/master/notebooks/lottery-tickets.ipynb) ([Colab](https://githubtocolab.com/greydanus/mnist1d/blob/master/notebooks/lottery-tickets.ipynb))
+  * [7. Observing deep double descent](https://github.com/greydanus/mnist1d/blob/master/notebooks/deep-double_descent.ipynb) ([Colab](https://githubtocolab.com/greydanus/mnist1d/blob/master/notebooks/deep-double-descent.ipynb))
+  * [8. Metalearning a learning rate](https://github.com/greydanus/mnist1d/blob/master/notebooks/metalearn-learn-rate.ipynb) ([Colab](https://githubtocolab.com/greydanus/mnist1d/blob/master/notebooks/metalearn-learn-rate.ipynb))
+  * [9. Metalearning an activation function](https://github.com/greydanus/mnist1d/blob/master/notebooks/metalearn-activation-function.ipynb) ([Colab](https://githubtocolab.com/greydanus/mnist1d/blob/master/notebooks/metalearn-activation-function.ipynb))
+  * [10. Benchmarking pooling methods](https://github.com/greydanus/mnist1d/blob/master/notebooks/benchmark-pooling.ipynb) ([Colab](https://githubtocolab.com/greydanus/mnist1d/blob/master/notebooks/benchmark-pooling.ipynb))
 * Community use cases
   * [TSNE: compare clustering of MNIST-1D vs. MNIST](https://github.com/greydanus/mnist1d/blob/master/notebooks/tsne-mnist-vs-mnist1d.ipynb) ([Colab](https://githubtocolab.com/greydanus/mnist1d/blob/master/notebooks/tsne-mnist-vs-mnist1d.ipynb))
 * Community use cases
