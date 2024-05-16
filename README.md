@@ -49,7 +49,7 @@ data = make_dataset(defaults)
 x,y,t = data['x'], data['y'], data['t']
 ```
 
-If you want to play around with this, see [notebooks/3. mnist1d_pip.ipynb](https://github.com/greydanus/mnist1d/blob/master/notebooks/mnist1d-pip.ipynb).
+If you want to play around with this, see [notebooks/mnist1d-pip.ipynb](https://github.com/greydanus/mnist1d/blob/master/notebooks/mnist1d-pip.ipynb).
 
 
 Comparing MNIST and MNIST-1D
