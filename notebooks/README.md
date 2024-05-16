@@ -4,7 +4,7 @@
 
 1. clone the repo
 ``` shell
-git clone https://github.com/psteinb/mnist1d.git
+git clone https://github.com/greydanus/mnist1d.git
 ```
 2. install all additional depdendencies
 ``` shell
