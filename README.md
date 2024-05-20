@@ -1,7 +1,7 @@
 The MNIST-1D Dataset
 =======
 
-[Blog post](https://greydanus.github.io/2020/12/01/scaling-down/) | [Paper](https://arxiv.org/abs/2011.14439)
+[Blog post](https://greydanus.github.io/2020/12/01/scaling-down/) | [Paper](https://arxiv.org/abs/2011.14439) | [GitHub](https://github.com/greydanus/mnist1d)
 
 
 Most machine learning models get around the same ~99% test accuracy on MNIST. The dataset in this repo, MNIST-1D, is 20x smaller and does a better job of separating between models with/without nonlinearity and models with/without spatial inductive biases.
