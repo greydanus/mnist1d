@@ -1,8 +1,8 @@
 # SJG Notes for PYPL uploads:
 
 
-* `git tag v0.0.1`
-* `git push origin v0.0.1`
+* `git tag v0.0.2`
+* `git push origin v0.0.2`
 * (commit)
 * `python3 -m build`
 * Upload w/`twine` (Test)
