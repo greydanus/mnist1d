@@ -43,6 +43,10 @@ all = ["torch","notebook"]
 [tool.setuptools]
 packages = ["mnist1d"]
 
+[tool.setuptools_scm]
+version_scheme = "post-release"
+local_scheme = "no-local-version"
+
 # [tool.setuptools.packages.find]
 # where = ["mnist1d"]
 

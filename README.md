@@ -36,7 +36,7 @@ Installing with `pip`
 --------
 
 ``` shell
-python -m pip install git+https://github.com/greydanus/mnist1d.git@master
+pip install mnist1d
 ```
 
 This allows you to build the default dataset locally:
@@ -50,6 +50,13 @@ x,y,t = data['x'], data['y'], data['t']
 ```
 
 If you want to play around with this, see [notebooks/mnist1d-pip.ipynb](https://github.com/greydanus/mnist1d/blob/master/notebooks/mnist1d-pip.ipynb).
+
+
+Alternatively, you can always `pip install` via the GitHub repo:
+
+``` shell
+python -m pip install git+https://github.com/greydanus/mnist1d.git@master
+```
 
 
 Comparing MNIST and MNIST-1D
