@@ -14,3 +14,5 @@ notebooks/mnist1d
 __pycache__
 .vscode
 *~
+
+dist/*

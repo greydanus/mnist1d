@@ -1,7 +1,7 @@
 The MNIST-1D Dataset
 =======
 
-[Blog post](https://greydanus.github.io/2020/12/01/scaling-down/) | [Paper](https://arxiv.org/abs/2011.14439)
+[Blog post](https://greydanus.github.io/2020/12/01/scaling-down/) | [Paper](https://arxiv.org/abs/2011.14439v4) | [GitHub](https://github.com/greydanus/mnist1d)
 
 
 Most machine learning models get around the same ~99% test accuracy on MNIST. The dataset in this repo, MNIST-1D, is 20x smaller and does a better job of separating between models with/without nonlinearity and models with/without spatial inductive biases.
@@ -36,7 +36,7 @@ Installing with `pip`
 --------
 
 ``` shell
-python -m pip install git+https://github.com/greydanus/mnist1d.git@master
+pip install mnist1d
 ```
 
 This allows you to build the default dataset locally:
@@ -50,6 +50,13 @@ x,y,t = data['x'], data['y'], data['t']
 ```
 
 If you want to play around with this, see [notebooks/mnist1d-pip.ipynb](https://github.com/greydanus/mnist1d/blob/master/notebooks/mnist1d-pip.ipynb).
+
+
+Alternatively, you can always `pip install` via the GitHub repo:
+
+``` shell
+python -m pip install git+https://github.com/greydanus/mnist1d.git@master
+```
 
 
 Comparing MNIST and MNIST-1D
