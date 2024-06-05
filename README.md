@@ -1,12 +1,21 @@
 The MNIST-1D Dataset
 =======
 
-[Blog post](https://greydanus.github.io/2020/12/01/scaling-down/) | [Paper](https://arxiv.org/abs/2011.14439) | [GitHub](https://github.com/greydanus/mnist1d)
+ICML 2024 | [Blog post](https://greydanus.github.io/2020/12/01/scaling-down/) | [Paper at arXiv](https://arxiv.org/abs/2011.14439) | [Paper at OpenReview](https://openreview.net/forum?id=n9pru4bJU9) | [GitHub](https://github.com/greydanus/mnist1d)
 
-
-Most machine learning models get around the same ~99% test accuracy on MNIST. The dataset in this repo, MNIST-1D, is 20x smaller and does a better job of separating between models with/without nonlinearity and models with/without spatial inductive biases.
+Most machine learning models get around the same ~99% test accuracy on MNIST. Our dataset, MNIST-1D, is 100x smaller (default sample size: 4000+1000; dimensionality: 40) and does a better job of separating between models with/without nonlinearity and models with/without spatial inductive biases.
 
 _**Dec 5, 2023**: MNIST-1D is now a core teaching dataset in Simon Prince's [Understanding Deep Learning](https://udlbook.github.io/udlbook/) textbook_
+
+Citation:
+```
+@inproceedings{greydanus2024scaling,
+  title={Scaling down deep learning with {MNIST}-{1D}},
+  author={Greydanus, Sam and Kobak, Dmitry},
+  booktitle={Proceedings of the 41st International Conference on Machine Learning},
+  year={2024}
+}
+```
 
 ![overview.png](static/overview.png)
 
@@ -24,8 +33,7 @@ Quickstart and use cases
   * [Metalearning a learning rate](https://github.com/greydanus/mnist1d/blob/master/notebooks/metalearn-learn-rate.ipynb) ([Colab](https://githubtocolab.com/greydanus/mnist1d/blob/master/notebooks/metalearn-learn-rate.ipynb))
   * [Metalearning an activation function](https://github.com/greydanus/mnist1d/blob/master/notebooks/metalearn-activation-function.ipynb) ([Colab](https://githubtocolab.com/greydanus/mnist1d/blob/master/notebooks/metalearn-activation-function.ipynb))
   * [Benchmarking pooling methods](https://github.com/greydanus/mnist1d/blob/master/notebooks/benchmark-pooling.ipynb) ([Colab](https://githubtocolab.com/greydanus/mnist1d/blob/master/notebooks/benchmark-pooling.ipynb))
-* Community use cases
-  * [TSNE: compare clustering of MNIST-1D vs. MNIST](https://github.com/greydanus/mnist1d/blob/master/notebooks/tsne-mnist-vs-mnist1d.ipynb) ([Colab](https://githubtocolab.com/greydanus/mnist1d/blob/master/notebooks/tsne-mnist-vs-mnist1d.ipynb))
+  * [t-SNE visualisations of MNIST-1D and MNIST](https://github.com/greydanus/mnist1d/blob/master/notebooks/tsne-mnist-vs-mnist1d.ipynb) ([Colab](https://githubtocolab.com/greydanus/mnist1d/blob/master/notebooks/tsne-mnist-vs-mnist1d.ipynb))
 * Community use cases
   * [A from-scratch, Numpy-only MLP with handwritten backprop](https://colab.research.google.com/drive/1E4w9chTkK-rPK-Zl-D0t4Q3FrdpQrHRQ?usp=sharing)
   * [Simon Prince's _Understanding Deep Learning_](https://udlbook.github.io/udlbook/) textbook uses MNIST1D as a core teaching example
@@ -46,7 +54,7 @@ from mnist1d.data import make_dataset, get_dataset_args
 
 defaults = get_dataset_args()
 data = make_dataset(defaults)
-x,y,t = data['x'], data['y'], data['t']
+x, y, t = data['x'], data['y'], data['t']
 ```
 
 If you want to play around with this, see [notebooks/mnist1d-pip.ipynb](https://github.com/greydanus/mnist1d/blob/master/notebooks/mnist1d-pip.ipynb).
@@ -75,7 +83,7 @@ Comparing MNIST and MNIST-1D
 
 -----------
 
-The original MNIST dataset is supposed to be the [Drosophilia of machine learning](https://twitter.com/ivanukhov/status/639122460722528257) but it has a few drawbacks:
+According to Geoffrey Hinton, the original MNIST dataset is the [Drosophila of machine learning](https://twitter.com/ivanukhov/status/639122460722528257). But we argue that it has a few drawbacks:
 * **Discrimination between models.** The difference between major ML models comes down to a few percentage points.
 * **Dimensionality.** Examples are 784-dimensional vectors so training ML models can take non-trivial compute and memory (think neural architecture search and metalearning).
 * **Hard to hack.** MNIST is not procedurally generated so it's hard to change the noise distribution, the scale/rotation/translation/shear/etc of the digits, or the resolution.
@@ -89,28 +97,22 @@ The original MNIST dataset is supposed to be the [Drosophilia of machine learnin
 Dimensionality reduction
 --------
 
-Visualizing the MNIST and MNIST-1D datasets with tSNE. The well-defined clusters in the MNIST plot indicate that the majority of the examples are separable via a kNN classifier in pixel space. The MNIST-1D plot, meanwhile, reveals a lack of well-defined clusters which suggests that learning a nonlinear representation of the data is much more important to achieve successful classification.
+Visualizing the MNIST and MNIST-1D datasets with tS-NE. The well-defined clusters in the MNIST plot indicate that the majority of the examples are separable via a kNN classifier in pixel space. The MNIST-1D plot, meanwhile, reveals a lack of well-defined clusters which suggests that learning a nonlinear representation of the data is much more important to achieve successful classification.
 
-![tsne.png](static/tsne.png)
-
-Thanks to [Dmitry Kobak](https://twitter.com/hippopedoid) for this contribution.
-
+<img src="notebooks/figures/tsne.png" width=500>
 
 Downloading the dataset
 --------
 
-Here's a minimal example of how to download the dataset. This is slightly worse than installing this repo with pip and generating it from scratch. It does have its uses. Sometimes I use it for double-checking that the procedurally generated dataset exactly matches the one used in the paper and blog post:
+Here's a minimal example of how to download the frozen dataset. This is arguably worse than installing this repo with `pip` and generating it from scratch. But it does have its uses. It can also be used for double-checking that the procedurally generated dataset exactly matches the one used in the paper and blog post:
 
-```
-import requests, pickle
+```python
+from urllib.request import urlopen
+import pickle
 
 url = 'https://github.com/greydanus/mnist1d/raw/master/mnist1d_data.pkl'
-r = requests.get(url, allow_redirects=True)
-open('./mnist1d_data.pkl', 'wb').write(r.content)
+data = pickle.load(urlopen(url))
 
-with open('./mnist1d_data.pkl', 'rb') as handle:
-    data = pickle.load(handle)
-    
 data.keys()
 
 >>> dict_keys(['x', 'x_test', 'y', 'y_test', 't', 'templates'])  # these are NumPy arrays
@@ -147,7 +149,7 @@ Example use cases
 ### [Quantifying CNN spatial priors](https://githubtocolab.com/greydanus/mnist1d/blob/master/notebooks/mnist1d-classification.ipynb)
 For a fixed number of training examples, we show that a CNN achieves far better test generalization than a comparable MLP. This highlights the value of the inductive biases that we build into ML models.
 
-![benchmarks.png](static/benchmarks_small.png)
+<img src="notebooks/figures/benchmark.png" width=500>
 
 ### [Finding lottery tickets](https://githubtocolab.com/greydanus/mnist1d/blob/master/notebooks/lottery-tickets.ipynb)
 We obtain sparse "lottery ticket" masks as described by [Frankle & Carbin (2018)](https://arxiv.org/abs/1803.03635). Then we perform some ablation studies and analysis on them to determine exactly what makes these masks special (spoiler: they have spatial priors including local connectivity). One result, which contradicts the original paper, is that lottery ticket masks can be beneficial even under different initial weights. We suspect this effect is present but vanishingly small in the experiments performed by Frankle & Carbin.
@@ -159,7 +161,7 @@ We obtain sparse "lottery ticket" masks as described by [Frankle & Carbin (2018)
 ### [Observing deep double descent](https://githubtocolab.com/greydanus/mnist1d/blob/master/notebooks/deep-double-descent.ipynb)
 We replicate the "deep double descent" phenomenon described by [Belkin et al. (2018)](https://arxiv.org/abs/1812.11118) and more recently studied at scale by [Nakkiran et al. (2019)](https://openai.com/blog/deep-double-descent/).
 
-![deep_double_descent.png](static/deep_double_descent_small.png)
+<img src="notebooks/figures/double-descent.png" width=500>
 
 ### [Metalearning a learning rate](https://githubtocolab.com/greydanus/mnist1d/blob/master/notebooks/metalearn-learn-rate.ipynb)
 A simple notebook that introduces gradient-based metalearning, also known as "unrolled optimization." In the spirit of [Maclaurin et al (2015)](http://proceedings.mlr.press/v37/maclaurin15.pdf) we use this technique to obtain the optimal learning rate for an MLP.
