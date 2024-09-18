@@ -98,7 +98,7 @@ According to Geoffrey Hinton, the original MNIST dataset is the [Drosophila of m
 Dimensionality reduction
 --------
 
-Visualizing the MNIST and MNIST-1D datasets with tS-NE. The well-defined clusters in the MNIST plot indicate that the majority of the examples are separable via a kNN classifier in pixel space. The MNIST-1D plot, meanwhile, reveals a lack of well-defined clusters which suggests that learning a nonlinear representation of the data is much more important to achieve successful classification.
+Visualizing the MNIST and MNIST-1D datasets with t-SNE. The well-defined clusters in the MNIST plot indicate that the majority of the examples are separable via a kNN classifier in pixel space. The MNIST-1D plot, meanwhile, reveals a lack of well-defined clusters which suggests that learning a nonlinear representation of the data is much more important to achieve successful classification.
 
 <img src="notebooks/figures/tsne.png" width=500>
 
