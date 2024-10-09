@@ -34,11 +34,12 @@ Quickstart and use cases
   * [Metalearning an activation function](https://github.com/greydanus/mnist1d/blob/master/notebooks/metalearn-activation-function.ipynb) ([Colab](https://githubtocolab.com/greydanus/mnist1d/blob/master/notebooks/metalearn-activation-function.ipynb))
   * [Benchmarking pooling methods](https://github.com/greydanus/mnist1d/blob/master/notebooks/benchmark-pooling.ipynb) ([Colab](https://githubtocolab.com/greydanus/mnist1d/blob/master/notebooks/benchmark-pooling.ipynb))
   * [t-SNE visualisations of MNIST-1D and MNIST](https://github.com/greydanus/mnist1d/blob/master/notebooks/tsne-mnist-vs-mnist1d.ipynb) ([Colab](https://githubtocolab.com/greydanus/mnist1d/blob/master/notebooks/tsne-mnist-vs-mnist1d.ipynb))
-* Community use cases
+* Community contributions
   * [A from-scratch, Numpy-only MLP with handwritten backprop](https://colab.research.google.com/drive/1E4w9chTkK-rPK-Zl-D0t4Q3FrdpQrHRQ?usp=sharing)
   * [Simon Prince's _Understanding Deep Learning_](https://udlbook.github.io/udlbook/) textbook uses MNIST1D as a core teaching example
   * [A matching GoLang implementation](https://github.com/mdcfrancis/gomnist1d) including matching random seeds, etc. by [mdcfrancis](https://github.com/mdcfrancis/)
-  * Send me a Colab link to your experiment and I'll feature it here.
+  * This dataset is also on [HuggingFace](https://huggingface.co/datasets/christopher/mnist1d) (thanks to [@cakiki](https://github.com/cakiki))
+  * ...send me a Colab link to your experiment and I'll feature it here.
 
 
 Installing with `pip`
