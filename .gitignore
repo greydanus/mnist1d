@@ -16,3 +16,6 @@ __pycache__
 *~
 
 dist/*
+jl.txt
+py.txt
+.CondaPkg/*
