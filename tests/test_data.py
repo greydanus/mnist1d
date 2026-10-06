@@ -1,17 +1,8 @@
 # The MNIST-1D dataset | 2024
 # Peter Steinbach
-from pathlib import Path
-from tempfile import NamedTemporaryFile
 from mnist1d.data import get_templates, make_dataset, get_dataset, get_dataset_args
 import numpy as np
 import pytest
-
-@pytest.fixture
-def tmpfile():
-    value = NamedTemporaryFile(delete=True)
-    print(value, value.file)
-    yield value
-    value.close()
 
 def test_get_templates():
     obs = get_templates()
@@ -52,10 +43,10 @@ def test_get_dataset_args():
     assert 'seed' in defaults.keys()
     assert defaults['seed'] == 42
 
-def test_get_dataset(tmpfile):
+def test_get_dataset(tmp_path):
 
     defaults = get_dataset_args(as_dict=False)
-    tmp = str(tmpfile)
+    tmp = str(tmp_path / "mnist1d_data.pkl")
 
     obs = get_dataset(args=defaults,path=tmp)
     assert isinstance(obs, dict)
