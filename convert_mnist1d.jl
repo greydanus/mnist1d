@@ -18,21 +18,22 @@ isfile(PKL_FILE) || Downloads.download(URL, PKL_FILE)
 
 data = pickle.loads(pybytes(read(PKL_FILE)))
 
-# Extract the Numpy arrays
-x = data["x"]
-x_test = data["x_test"]
-y = data["y"]
-y_test = data["y_test"]
-t = data["t"]
-templates = data["templates"]
+# Convert the Numpy arrays to native Julia arrays (Py objects can't be serialized)
+x = pyconvert(Array, data["x"])
+x_test = pyconvert(Array, data["x_test"])
+y = pyconvert(Array, data["y"])
+y_test = pyconvert(Array, data["y_test"])
+t = pyconvert(Array, data["t"])
+# templates is a dict: {'x': ..., 't': ..., 'y': ...}
+templates = Dict(pyconvert(String, k) => pyconvert(Array, v) for (k, v) in data["templates"].items())
 
-struct MNIST1D 
-    x 
-    x_test
-    y 
-    y_test
-    t 
-    templates
+struct MNIST1D
+    x::Array
+    x_test::Array
+    y::Array
+    y_test::Array
+    t::Array
+    templates::Dict{String,Array}
 end
 
 dataset = MNIST1D(
@@ -48,3 +49,21 @@ dataset = MNIST1D(
 serialize(JLS_FILE, dataset)
 
 # verify the dataset
+data = deserialize("mnist1d.jls")
+
+function describe(name, arr)
+    println(
+        name, ": ",
+        size(arr), ", ",
+        eltype(arr), ", ",
+        bytes2hex(sha256(reinterpret(UInt8, vec(arr))))
+    )
+end
+
+for name in (:x, :x_test, :y, :y_test, :t)
+    describe(name, getfield(data, name))
+end
+
+for k in sort(collect(keys(data.templates)))
+    describe("templates[$k]", data.templates[k])
+end
